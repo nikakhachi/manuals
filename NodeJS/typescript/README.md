@@ -1,9 +1,20 @@
-Set up NodeJS with TypeScript
+## Set up NodeJS with TypeScript
 
-npm i --save-dev typescript @types/node ts-node ts-node-dev
+#### 1) Initialize and install dependencies
 
-Create ts config file
+``npm init``
 
-Add package.json scripts :
-"start": "ts-node server.ts",
-"dev": "ts-node-dev --respawn server.ts",
+``npm i --save-dev typescript @types/node ts-node ts-node-dev``
+
+#### 2) Create ts config file
+
+``touch tsconfig.json`` and copy the code from tsconfig.json 
+
+or
+
+``tsc --init``
+
+#### 3) Add package.json scripts :
+``"start": "ts-node server.ts",``
+
+``"dev": "ts-node-dev --respawn server.ts",``
