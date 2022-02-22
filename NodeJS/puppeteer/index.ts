@@ -1,9 +1,11 @@
-import { Browser, Page, launch } from "puppeteer";
+import Puppeteer, { Browser, Page } from "puppeteer";
 
 (async () => {
-  const browser: Browser = await launch({ headless: false });
+  const browser: Browser = await Puppeteer.launch({ headless: false });
   const page: Page = await browser.newPage();
-  await page.goto("https://example.com");
+  await page.goto("https://example.com", {
+    waitUntil: "domcontentloaded",
+  });
   await page.screenshot({ path: "example.png" });
   await page.pdf({ path: "hn.pdf", format: "a4" });
 
