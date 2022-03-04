@@ -9,4 +9,4 @@ const neo4jQuery = async (query) => {
   return data;
 };
 
-module.exports = { neo4jQuery, driver };
+export { neo4jQuery, driver };
