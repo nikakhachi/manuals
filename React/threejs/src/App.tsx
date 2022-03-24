@@ -21,6 +21,7 @@ function App() {
     backgroundTexture(scene);
 
     function animate() {
+      handleWindowResize(camera, renderer)
       requestAnimationFrame(animate);
       torusObject.rotation.x += 0.01;
       torusObject.rotation.y += 0.005;
@@ -30,6 +31,13 @@ function App() {
     }
 
     animate();
+    
+    const handleWindowResize = (camera, renderer) => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+    
   }, []);
 
   return <canvas id="bg" />;
