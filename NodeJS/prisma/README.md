@@ -14,8 +14,6 @@ npx prisma generate
 
 npx prisma studio
 
-psql -U postgres
-
 ### Connect to postgress inside container
 
 psql -U postgres
