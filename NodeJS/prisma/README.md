@@ -10,6 +10,10 @@ npx prisma migrate dev --name migration_name
 
 npx prisma generate
 
+### Open web client for database
+
+npx prisma studio
+
 ### Connect to postgress inside container
 
 psql -U postgres
