@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export default (scene: THREE.Scene) => {
+const getTorus = (scene: THREE.Scene) => {
   const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
   const material = new THREE.MeshStandardMaterial({
     color: 0xff6347,
@@ -12,3 +12,5 @@ export default (scene: THREE.Scene) => {
 
   return torus;
 };
+
+export { getTorus };

@@ -2,10 +2,7 @@ import * as THREE from "three";
 
 const boxTexture = (scene: THREE.Scene) => {
   const meTexture = new THREE.TextureLoader().load("/owl.jpeg");
-  const me = new THREE.Mesh(
-    new THREE.BoxGeometry(3, 3, 3),
-    new THREE.MeshBasicMaterial({ map: meTexture })
-  );
+  const me = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: meTexture }));
   scene.add(me);
   return me;
 };
@@ -24,9 +21,7 @@ const sphereTexture = (scene: THREE.Scene) => {
 };
 
 const backgroundTexture = (scene: THREE.Scene) => {
-  const spaceTexture = new THREE.TextureLoader().load(
-    "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__480.jpg"
-  );
+  const spaceTexture = new THREE.TextureLoader().load("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__480.jpg");
   scene.background = spaceTexture;
   scene.background.encoding = THREE.sRGBEncoding;
 };
