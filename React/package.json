@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "react-scripts start",
+    "start:local": "cross-env REACT_APP_API=LOCAL react-scripts start"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
