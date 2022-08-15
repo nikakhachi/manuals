@@ -18,6 +18,11 @@ import Puppeteer, { Browser, Page } from "puppeteer";
     ]
   });
 
+
+  // Arguments for logging into Instagram
+  // args: ["--disable-gpu", "--disable-dev-shm-usage", "--disable-setuid-sandbox", "--no-sandbox"],
+
+
   // configure to increase the speed
   const more_args = [
     '--autoplay-policy=user-gesture-required',
